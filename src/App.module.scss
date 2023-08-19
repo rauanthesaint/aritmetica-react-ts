@@ -1,0 +1,28 @@
+$eucalyptus-50: #f1fcf5;
+$eucalyptus-100: #dff9ea;
+$eucalyptus-200: #c0f2d6;
+$eucalyptus-300: #8fe6b5;
+$eucalyptus-400: #56d28d;
+$eucalyptus-500: #30b76d;
+$eucalyptus-600: #25a55f;
+$eucalyptus-700: #1e7747;
+$eucalyptus-800: #1d5e3b;
+$eucalyptus-900: #194e32;
+$eucalyptus-950: #082b1a;
+
+$gray-400: #181818;
+$gray-300: #212121;
+$gray-200: #2E2E2E;
+$gray-100: #454545;
+$gray-50: #F6F6F6;
+
+.app {
+    width: 100%;
+    height: 100vh;
+
+    padding: 8px;
+
+    background: $gray-400;
+    color: $gray-50;
+}
+

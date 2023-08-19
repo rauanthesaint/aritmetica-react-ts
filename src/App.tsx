@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import styles from './App.module.scss';
+
 const App = () => {
   return (
-    <div>
+    <div className={styles.app}>
+      hello
       <BrowserRouter>
         <Routes>
           
