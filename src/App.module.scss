@@ -21,8 +21,14 @@ $gray-50: #F6F6F6;
     height: 100vh;
 
     padding: 8px;
+    display: flex;
+    gap: 8px;
 
     background: $gray-400;
     color: $gray-50;
 }
+
+$rounded-8: 8px;
+$rounded-6: 6px;
+$rounded-4: 4px;
 

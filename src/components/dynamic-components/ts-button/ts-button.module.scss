@@ -1,0 +1,19 @@
+@import '../../../App.module.scss';
+
+.button {
+    all: unset;
+    min-width: 48px;
+    width: auto;
+    height: 48px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    overflow: hidden;
+
+    border-radius: $rounded-6;
+}

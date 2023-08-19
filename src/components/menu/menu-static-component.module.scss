@@ -1,0 +1,106 @@
+@import '../../App.module.scss';
+
+.container {
+    min-width: 56px;
+    width: 256px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    gap: 8px;
+
+    background: $gray-300;
+    overflow: hidden;
+    border-radius: $rounded-8;
+
+    transition: width 200ms ease-in-out;
+    
+
+    .header {
+        height: 48px;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 4px;
+        
+        .heading {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 8px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .logo {
+            width: 24px;
+            color: $eucalyptus-600;
+        }
+    }
+
+    .content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .menu__major.group {
+            background: $gray-200;
+            border-radius: $rounded-4;
+            .link .item {
+                width: 100%;
+                transition: background 200ms ease-in-out;
+            }
+            .link .active {
+                background: $eucalyptus-900;
+            }
+        }
+        
+        .group {
+            width: 100%;
+            .item {
+                transition: background 100ms linear;
+                &:hover.minor {
+                    background: $gray-200;
+                }
+                &:hover .icon__container {
+                    scale: 1.1;
+                }
+                .icon__container {
+                    transition: scale 100ms ease-out;
+                    min-width: 48px;
+                    height: 48px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .item__title {
+                    font-weight: 300;
+                }
+                width: inherit;
+                justify-content: start;
+            }
+        }
+    }
+}
+.caption {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    color: $gray-100;
+    min-width: 250px;
+    
+}
+
+.container.closed {
+    width: 56px;    
+}
+
+.icon {
+    width: 20px;
+}
+
+.link {
+    all: unset;
+}
