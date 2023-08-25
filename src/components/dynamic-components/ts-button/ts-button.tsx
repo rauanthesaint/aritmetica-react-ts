@@ -7,6 +7,7 @@ import clsx from 'clsx';
 
 type props = ButtonHTMLAttributes<HTMLButtonElement> & {
     onClick?: MouseEventHandler<HTMLButtonElement>;
+    className?: string;
 }
 
 export const Button: FC<PropsWithChildren<props>> = ({

@@ -1,7 +1,6 @@
 .app {
   width: 100%;
   height: 100vh;
-  padding: 8px;
   display: flex;
   gap: 8px;
   background: #181818;
@@ -20,4 +19,5 @@
   gap: 4px;
   overflow: hidden;
   border-radius: 6px;
+  outline: none;
 }/*# sourceMappingURL=ts-button.module.css.map */

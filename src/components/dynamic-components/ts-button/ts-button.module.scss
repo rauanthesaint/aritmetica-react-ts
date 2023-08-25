@@ -5,7 +5,6 @@
     min-width: 48px;
     width: auto;
     height: 48px;
-
     cursor: pointer;
 
     display: flex;
@@ -16,4 +15,5 @@
     overflow: hidden;
 
     border-radius: $rounded-6;
+    outline: none;
 }
