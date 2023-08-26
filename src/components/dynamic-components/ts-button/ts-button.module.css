@@ -1,23 +1,130 @@
 .app {
   width: 100%;
   height: 100vh;
-  display: flex;
-  gap: 8px;
   background: #181818;
   color: #F6F6F6;
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #F6F6F6;
+}
+
+button, li, ul {
+  all: unset;
+}
+
+span, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+svg path {
+  transition: d 100ms ease-in-out;
+  stroke: #F6F6F6;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
 .button {
   all: unset;
-  min-width: 48px;
-  width: auto;
   height: 48px;
   cursor: pointer;
+  font-weight: 500;
+  overflow: hidden;
+  border-radius: 6px;
+  transition: all 100ms ease-in-out;
+  display: grid;
+  place-items: center;
+}
+.button:is(:not(.text)):active {
+  scale: 0.95;
+}
+.button:is(.text):active {
+  background-color: #454545;
+}
+.button a, .button span {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  overflow: hidden;
-  border-radius: 6px;
-  outline: none;
+  padding-inline: 2rem;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+}
+
+.outlined {
+  background: transparent;
+  border: 1px solid #25a55f;
+  color: #25a55f;
+}
+.outlined:disabled {
+  border-color: #454545;
+  color: #454545;
+}
+.outlined.success {
+  border-color: #38E54D;
+  color: #38E54D;
+}
+.outlined.danger {
+  border-color: #EB5353;
+  color: #EB5353;
+}
+.outlined.warning {
+  border-color: #F9D923;
+  color: #F9D923;
+}
+.outlined.info {
+  border-color: #2192FF;
+  color: #2192FF;
+}
+
+.filled:disabled {
+  background: #454545;
+  color: #181818;
+}
+.filled.success {
+  background: #38E54D;
+  color: #181818;
+}
+.filled.danger {
+  background: #EB5353;
+}
+.filled.warning {
+  background: #F9D923;
+  color: #181818;
+}
+.filled.info {
+  background: #2192FF;
+}
+
+.text {
+  border-radius: 4px;
+  height: auto;
+  padding: unset;
+}
+.text:disabled {
+  color: #454545;
+}
+.text.success {
+  color: #38E54D;
+}
+.text.danger {
+  color: #EB5353;
+}
+.text.warning {
+  color: #F9D923;
+}
+.text.info {
+  color: #2192FF;
 }/*# sourceMappingURL=ts-button.module.css.map */

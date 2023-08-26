@@ -1,0 +1,142 @@
+@import '../../../App.module.scss';
+
+.sidebar {
+    transition: width 200ms ease-in-out;
+    // Sizing
+    width: 16rem;
+    // Rendering
+    background: $gray-300;
+    border-radius: $rounded-8;
+    // Positioning
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    // ------------------------------------------------------------------------------------------------------------------
+    // Header
+    .header {
+        // sizing
+        height: 2rem;
+        // rendering
+        overflow: hidden;
+        // positioning
+        padding-inline: 0.5rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // span {
+        //     margin-left: 16px;
+        // }
+        .sidebar__toggleButton {
+            // sizing
+            width: 3rem;
+            height: 2rem;
+            // rendering
+            border-radius: $rounded-4;
+            background: $gray-300;
+            transition: background 100ms linear;
+            &:hover {
+                background: $gray-100;
+            }
+            // positioning
+            position: absolute;
+            right: 0;
+            display: grid;
+            place-items: center;
+            
+        }
+    }
+    // ------------------------------------------------------------------------------------------------------------------
+    main {
+        nav {
+            background: $gray-200;
+            border-radius: $rounded-4;
+            a, a div {
+                transition: background 200ms linear;
+            }
+
+            a.active {
+                background: $eucalyptus-900;
+                div.active {
+                    background: $eucalyptus-600;
+                    svg path {
+                        stroke: $gray-300;
+                        stroke-width: 2;
+                    }
+                }
+            }
+        }
+    }
+    // ------------------------------------------------------------------------------------------------------------------
+    .footer button, main nav a {
+        width: 100%;
+        height: 3rem;
+        // rendering
+        border-radius: $rounded-4;
+        overflow: hidden;
+        // positioning
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        div { 
+            min-width: 48px;
+            height: inherit;
+            border-radius: inherit;
+            display: grid;
+            place-items: center;
+        }
+        transition: all 100ms linear;
+    }
+    // ------------------------------------------------------------------------------------------------------------------
+    .footer {
+        margin-top: auto;
+        button {
+            color: lighten($color: $gray-100, $amount: 20%);
+            div svg path {
+                stroke: lighten($color: $gray-100, $amount: 20%);
+            }
+            &:hover {
+                background: $gray-100;
+                color: $gray-50;
+                div svg path { 
+                    stroke: $gray-50;
+                }
+            }
+        }
+        .copyright__caption {
+            width: 100%;
+            overflow: hidden;
+            color: $gray-100;
+            font-size: 14px;
+            margin: 24px 0;
+            display: flex;
+            gap: 8px;
+            div {
+                min-width: 48px;
+                display: grid;
+                place-items: center;
+                svg path { 
+                    stroke: $gray-100
+                }
+            }
+        }
+    }
+    // ------------------------------------------------------------------------------------------------------------------
+    hr {
+        // sizing
+        width: 80%;
+        height: 1px;
+        // rendering
+        border: 0;
+        background: $gray-200;
+    }
+}
+
+.sidebar.closed { 
+    width: 3.5rem;
+    .header .sidebar__toggleButton .icon__menu path {
+        d: path('M3 5h8M3 12h13M3 19h18');
+    } 
+}
+

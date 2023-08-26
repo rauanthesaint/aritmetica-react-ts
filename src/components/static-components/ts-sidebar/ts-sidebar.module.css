@@ -1,0 +1,149 @@
+.app {
+  width: 100%;
+  height: 100vh;
+  background: #181818;
+  color: #F6F6F6;
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #F6F6F6;
+}
+
+button, li, ul {
+  all: unset;
+}
+
+span, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+svg path {
+  transition: d 100ms ease-in-out;
+  stroke: #F6F6F6;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.sidebar {
+  transition: width 200ms ease-in-out;
+  width: 16rem;
+  background: #212121;
+  border-radius: 8px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sidebar .header {
+  height: 2rem;
+  overflow: hidden;
+  padding-inline: 0.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar .header .sidebar__toggleButton {
+  width: 3rem;
+  height: 2rem;
+  border-radius: 4px;
+  background: #212121;
+  transition: background 100ms linear;
+  position: absolute;
+  right: 0;
+  display: grid;
+  place-items: center;
+}
+.sidebar .header .sidebar__toggleButton:hover {
+  background: #454545;
+}
+.sidebar main nav {
+  background: #2E2E2E;
+  border-radius: 4px;
+}
+.sidebar main nav a, .sidebar main nav a div {
+  transition: background 200ms linear;
+}
+.sidebar main nav a.active {
+  background: #194e32;
+}
+.sidebar main nav a.active div.active {
+  background: #25a55f;
+}
+.sidebar main nav a.active div.active svg path {
+  stroke: #212121;
+  stroke-width: 2;
+}
+.sidebar .footer button, .sidebar main nav a {
+  width: 100%;
+  height: 3rem;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 100ms linear;
+}
+.sidebar .footer button div, .sidebar main nav a div {
+  min-width: 48px;
+  height: inherit;
+  border-radius: inherit;
+  display: grid;
+  place-items: center;
+}
+.sidebar .footer {
+  margin-top: auto;
+}
+.sidebar .footer button {
+  color: #787878;
+}
+.sidebar .footer button div svg path {
+  stroke: #787878;
+}
+.sidebar .footer button:hover {
+  background: #454545;
+  color: #F6F6F6;
+}
+.sidebar .footer button:hover div svg path {
+  stroke: #F6F6F6;
+}
+.sidebar .footer .copyright__caption {
+  width: 100%;
+  overflow: hidden;
+  color: #454545;
+  font-size: 14px;
+  margin: 24px 0;
+  display: flex;
+  gap: 8px;
+}
+.sidebar .footer .copyright__caption div {
+  min-width: 48px;
+  display: grid;
+  place-items: center;
+}
+.sidebar .footer .copyright__caption div svg path {
+  stroke: #454545;
+}
+.sidebar hr {
+  width: 80%;
+  height: 1px;
+  border: 0;
+  background: #2E2E2E;
+}
+
+.sidebar.closed {
+  width: 3.5rem;
+}
+.sidebar.closed .header .sidebar__toggleButton .icon__menu path {
+  d: path("M3 5h8M3 12h13M3 19h18");
+}/*# sourceMappingURL=ts-sidebar.module.css.map */

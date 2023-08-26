@@ -1,0 +1,32 @@
+@import '../../../App.module.scss';
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(calc(-50%));
+    }
+}
+
+.container { 
+    .disabled {
+        display: none !important;
+    }
+    position: relative;
+    &:hover > .content {
+        display: block;
+        animation: fadeUp 100ms ease forwards;
+    }
+    .content {
+        background: $gray-500;
+        border-radius: $rounded-6;
+        position: absolute;
+        top: 50%;
+        transform: translateY(calc(-50% + 10px));
+        left: calc(100% + 16px);
+        z-index: 100;
+        padding: 8px;
+        opacity: 0;
+        display: none;
+    }
+}
+

@@ -1,19 +1,102 @@
 @import '../../../App.module.scss';
-
 .button {
     all: unset;
-    min-width: 48px;
-    width: auto;
     height: 48px;
     cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-
+    font-weight: 500;
     overflow: hidden;
-
     border-radius: $rounded-6;
-    outline: none;
+    transition: all 100ms ease-in-out;
+
+    &:is(:not(.text)):active {
+        scale: 0.95;
+    }
+    &:is(.text):active {
+        background-color: $gray-100;
+    }
+
+    display: grid;
+    place-items: center;
+
+    & a, span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        padding-inline: 2rem;
+        color: inherit;
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.outlined {
+    &:disabled {
+        border-color: $gray-100;
+        color: $gray-100;
+    }
+    background: transparent;
+    border: 1px solid $eucalyptus-600;
+    color: $eucalyptus-600;
+    &.success {
+        border-color: $success;
+        color: $success;   
+    }
+    &.danger {
+        border-color: $danger;
+        color: $danger;   
+    }
+    &.warning {
+        border-color: $warning;
+        color: $warning;   
+    }
+    &.info {
+        border-color: $info;
+        color: $info;   
+    }
+}
+
+.filled {
+    &:disabled {
+        background: $gray-100;
+        color: $gray-400;
+    }
+
+    &.success {
+        background: $success;
+        color: $gray-400;   
+    }
+    &.danger {
+        background: $danger;
+    }
+    &.warning {
+        background: $warning;
+        color: $gray-400;   
+    }
+    &.info {
+        background: $info;
+    }
+}
+
+.text {
+    border-radius: 4px;
+    &:disabled {
+        color: $gray-100;
+    }
+    height: auto;
+    padding: unset;
+
+    &.success {
+        color: $success;   
+    }
+    &.danger {
+        color: $danger;   
+    }
+    &.warning {
+        color: $warning;   
+    }
+    &.info {
+        color: $info;   
+    }
 }
